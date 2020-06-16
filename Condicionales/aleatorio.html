@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Aleatorio</title>
+		<script>
+			alert("Adivina un numero entre el 0 y el 1000");
+			var name = prompt("Ingresa tu nombre");
+		</script>
+	</head>
+	<body>
+		<table width="25%" border="0">
+			<tr>
+				<td>
+					<label for="textfield"></label>
+					<input type="text" name="textfield" id="c_mensaje" />
+				</td>
+				<td>
+					<label for="textfield2"></label>
+					<input type="text" name="textfield2" id="c_intentos" />
+				</td>
+			</tr>
+		</table>
+		<script>
+			var aleatorio = Math.round(Math.random() * 1000);
+
+			var minum, intentos;
+
+			minum = 0;
+			intentos = 0;
+
+			var c_mensaje = document.getElementById("c_mensaje");
+			var c_intentos = document.getElementById("c_intentos");
+
+			do {
+				minum = prompt("Introduce tu numero entre 0 y 1000");
+				if (aleatorio > minum) {
+					c_mensaje.value = "Mas alto";
+
+					c_mensaje.style.fontSize = "18px";
+				}
+				if (aleatorio < minum) {
+					c_mensaje.value = "Mas bajo";
+
+					c_mensaje.style.fontSize = "18px";
+				}
+				intentos++;
+
+				c_intentos.value = intentos;
+
+				c_intentos.style.fontSize = "18px";
+				c_intentos.style.color = "red";
+				c_intentos.style.textAlign = "center";
+			} while (aleatorio != minum);
+
+			c_mensaje.value = "Correcto " + name + "!";
+			c_mensaje.style.fontSize = "20px";
+			c_mensaje.style.color = "blue";
+			c_intentos.value = "Lo conseguiste en " + intentos + " intentos";
+			c_intentos.style.color = "red";
+			c_intentos.style.textAlign = "center";
+		</script>
+	</body>
+</html>

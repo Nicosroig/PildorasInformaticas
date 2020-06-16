@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<script>
+			var num1 = prompt("Introduzca el primer numero");
+			var num2 = prompt("Introduzca el segundo numero");
+			if (!isNaN(num1) && !isNaN(num2)) {
+				//isNaN pregunta si no es un numero, con ! lo doy vuelta y pregunto si ES un numero
+				var operacion = prompt(
+					"Que operacion quiere utilizar? suma, resta, multiplicacion o division"
+				);
+				if (operacion == "suma") {
+					alert(parseInt(num1) + parseInt(num2));
+				} else if (operacion == "resta") {
+					alert(parseInt(num1) - parseInt(num2));
+				} else if (operacion == "multiplicacion") {
+					alert(parseInt(num1) * parseInt(num2));
+				} else if (operacion == "division") {
+					alert(parseInt(num1) / parseInt(num2));
+				} else {
+					alert("La operacion no esta contemplada");
+				}
+			} else {
+				alert("Debe introducir numeros");
+			}
+		</script>
+	</head>
+	<body></body>
+</html>

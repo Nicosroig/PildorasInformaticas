@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Usando Arrays</title>
+<link rel="stylesheet" href="css/micss.css">
+<script>
+
+  var articulos=["Zapatillas", "Camiseta", "Pantalon", "Calcetines"];
+  // var articulos=new Array ("Zapatillas", "Camiseta", "Pantalon", "Calcetines");
+  // var articulos=[];//Array vacio al cual se le pueden agregar cosas despues 
+  </script>
+</head>
+
+<body>
+<div class="contenedor">
+  <div class="header">
+    <p class="logo">JavaScript Arrays <i class="mm">Píldoras Informáticas
+     </p>
+  </div>
+  <div class="contenido">
+    <div class="principal">
+      <h1>Manejando Arrays</h1>
+      <script>
+	  
+        document.write ("<p>El primer articulo es <strong>")
+        
+        document.write (articulos[0] + "</strong></p>");
+
+        document.write ("<p>El ultimo elemento es <strong>");
+		
+        document.write (articulos[articulos.length-1] + "</strong></p>");
+
+        articulos.unshift("Balon");//Agrega elementos al principio del array
+
+        document.write("<p>Agregamos este elemento: <strong>");
+
+        document.write (articulos[0] + "</strong></p>");
+
+        articulos.push("Raqueta");//Agrega elementos al final del array
+		
+        document.write("<p>Agregamos este elemento al final: <strong>");
+
+        document.write (articulos[articulos.length-1] + "</strong></p>");
+
+        articulos.push(prompt("Introduce el articulo"));
+
+        document.write("<p>El cliente agrego este elemento al final: <strong>");
+
+        document.write(articulos[articulos.length-1] + "</strong></p>");
+
+        articulos.shift(); //borra el primer elemento del array
+
+        articulos.pop(); //borra el ultimo elemento del array
+
+	    </script>
+    </div>
+  </div>
+  
+</div>
+</body>
+</html>
