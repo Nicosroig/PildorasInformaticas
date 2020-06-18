@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Funciones Argumentos</title>
+		<script>
+			function name(name) {
+				document.write(name);
+			}
+
+			var nombre = prompt("Introduzca su nombre");
+		</script>
+	</head>
+	<body>
+		<p style="font-size: 24px; font-weight: bold;">
+			Hola:
+			<script>
+				name(nombre);
+			</script>
+			. Bienvenido a mi pagina web
+		</p>
+		<p>
+			Ahora paso la funcion por segunda vez. Nombre:
+			<script>
+				name(nombre);
+			</script>
+		</p>
+	</body>
+</html>
