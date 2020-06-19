@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculadora arcaica</title>
+		<script>
+			var repetir = "si";
+
+			function suma(num1, num2) {
+				alert("La suma es: " + (num1 + num2));
+			}
+			function resta(num1, num2) {
+				alert("La resta es: " + (num1 - num2));
+			}
+			function multiplicar(num1, num2) {
+				alert("La multiplicacion es: " + num1 * num2);
+			}
+			function dividir(num1, num2) {
+				alert("La division es: " + num1 / num2);
+			}
+
+			do {
+				var operacion = prompt("Que operacion desea realizar?");
+
+				var operador1 = parseInt(prompt("Introduce el primer numero"));
+
+				var operador2 = parseInt(prompt("Introduce el segundo numero"));
+
+				if (operacion == "suma") {
+					suma(operador1, operador2);
+				} else if (operacion == "resta") {
+					resta(operador1, operador2);
+				} else if (operacion == "multiplicar") {
+					multiplicar(operador1, operador2);
+				} else if (operacion == "dividir") {
+					dividir(operador1, operador2);
+				} else {
+					alert("Operacion no disponible");
+				}
+
+				repetir = prompt("Desea repetir?");
+			} while (repetir == "si");
+		</script>
+	</head>
+	<body></body>
+</html>
