@@ -34,24 +34,36 @@
 			var acumulado = 0;
 			var sumar = false;
 			var restar = false;
+			var p_operacion = true;
 			function display_numeros(numero) {
 				document.getElementById("display").value = cifra + numero;
 				cifra = document.getElementById("display").value;
 			}
 			function suma() {
-				acumulado = acumulado + parseInt(cifra);
-				document.getElementById("display").value = acumulado;
+				if (restar) {
+					acumulado = acumulado - parseInt(cifra);
+					document.getElementById("display").value = acumulado;
+				} else {
+					acumulado = acumulado + parseInt(cifra);
+					document.getElementById("display").value = acumulado;
+				}
 				cifra = "";
 				sumar = true;
 				restar = false;
+				p_operacion = false;
 			}
 			function resta() {
-				if (sumar) {
-					acumulado = acumulado + parseInt(cifra);
-					document.getElementById("display").value = acumulado;
+				if ((p_operacion = false)) {
+					if (sumar) {
+						acumulado = acumulado + parseInt(cifra);
+						document.getElementById("display").value = acumulado;
+					} else {
+						acumulado = acumulado - parseInt(cifra);
+						document.getElementById("display").value = acumulado;
+					}
 				} else {
-					acumulado = acumulado - parseInt(cifra);
-					document.getElementById("display").value = acumulado;
+					acumulado = parseInt(cifra);
+					p_operacion = false;
 				}
 				cifra = "";
 				sumar = false;
@@ -63,6 +75,8 @@
 				} else if (restar) {
 					document.getElementById("display").value = acumulado - parseInt(cifra);
 				}
+				acumulado = parseInt(document.getElementById("display").value);
+				cifra = 0;
 			}
 		</script>
 	</head>
