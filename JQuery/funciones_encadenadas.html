@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Funciones encadenadas</title>
+		<style>
+			#anuncio {
+				background-color: blue;
+				color: white;
+				font-size: 24px;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$("#anuncio").width(500).height(500).text("¡VENDE!").hide().fadeIn(10000);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="anuncio">
+			¡COMPRA!
+		</div>
+		<!--<script>
+			var anuncio = document.getElementById("anuncio");
+
+			anuncio.style.width = "500px";
+			anuncio.style.height = "500px";
+			anuncio.innerHTML = "¡VENDE!";
+		</script>-->
+	</body>
+</html>

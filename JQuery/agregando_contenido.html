@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.micontenedor {
+				background-color: yellow;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				//alert($("#errores h2").html()); //Muestra el contenido
+				//$("#errores").html("<p>Hay errores en el formulario</p>"); //cambia el texto pudiendo cambiar la etiqueta HTML
+				//$("#errores h2").text("Hay errores en el formulario"); //cambia el texto sin cambiar la etiqueta HTML
+				$("#errores").append("<p>Hay errores despues del selector</p>"); //agrega el texto despues del selector
+				$("#errores").prepend("<p>Hay errores antes del selector</p>"); //agrega el texto antes del selector
+				$("#errores").before("<p>Hay errores antes del contenedor</p>"); //agrega el texto antes del contenedor del selector
+				$("#errores").after("<p>Hay errores despues del contenedor</p>"); //agrega el texto despues del contenedor del selector
+			});
+		</script>
+	</head>
+	<body>
+		<div id="contenedor">
+			<div id="errores" class="micontenedor">
+				<h2>Errores</h2>
+			</div>
+		</div>
+	</body>
+</html>
